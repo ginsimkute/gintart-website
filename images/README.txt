@@ -1,0 +1,1 @@
+To use your real logo: upload a PNG file named logo.png to this images folder. The site will automatically display it in the centre of the navigation. A transparent PNG is best. Until then, the temporary leaf logo appears.
