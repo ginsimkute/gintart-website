@@ -108,3 +108,34 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
  .contact-links{grid-column:1/-1;grid-row:3;flex-direction:column;align-items:flex-start;padding:12px 0 0}
  .footer-inner{gap:12px;flex-wrap:wrap;padding-top:20px;padding-bottom:20px}
 }
+
+/* V10 refinements: logo, portrait, navigation and open contact layout */
+.site-header .nav{grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr) 92px;min-height:102px}
+.brand,.brand-upload{width:90px;height:90px}
+.nav-side a{color:#211d19;font-weight:400}
+.nav-side a:hover{color:var(--accent)}
+.profile-image{width:50%;height:50%;max-height:300px;object-fit:cover}
+.contact-section{padding:76px 0 82px}
+.contact-layout{display:grid;grid-template-columns:minmax(115px,.65fr) minmax(300px,1.9fr) minmax(225px,1fr);gap:clamp(24px,4vw,70px);align-items:center}
+.contact-art{justify-content:center}
+.contact-botanical{width:145px;max-height:175px;opacity:.9}
+.contact-copy h2{font-size:clamp(40px,4vw,56px);margin:8px 0 14px}
+.contact-description{font-size:14px;line-height:1.7;max-width:510px;padding:0;border:0;margin:0}
+.contact-links{border-left:1px solid var(--line);padding-left:clamp(18px,3vw,42px);font-size:14px;gap:18px}
+@media(max-width:900px){
+ .site-header .nav{grid-template-columns:1fr 1fr;min-height:unset}
+ .contact-layout{grid-template-columns:120px minmax(0,1fr);gap:20px 28px}
+ .contact-botanical{width:110px;max-height:150px}
+ .contact-links{grid-column:2;grid-row:2;border-left:0;border-top:1px solid var(--line);padding:18px 0 0;flex-direction:column;align-items:flex-start}
+}
+@media(max-width:640px){
+ .profile-image{width:50%;height:50%;max-height:220px}
+ .contact-section{padding:54px 0 60px}
+ .contact-layout{grid-template-columns:75px minmax(0,1fr);gap:18px}
+ .contact-art{grid-column:1;grid-row:1;align-self:start}
+ .contact-botanical{width:72px;max-height:105px}
+ .contact-copy{grid-column:2;grid-row:1}
+ .contact-copy h2{font-size:clamp(34px,8vw,43px)}
+ .contact-description{font-size:13px}
+ .contact-links{grid-column:1/-1;grid-row:2;flex-direction:column;padding:18px 0 0}
+}
