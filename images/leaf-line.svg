@@ -1,1 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 250" fill="none" stroke="#967557" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M37 229C73 180 98 139 118 81M79 170C57 169 42 154 38 128c28 0 47 17 41 42ZM94 138c29-5 43-23 46-49-30 5-46 21-46 49ZM110 102C91 87 88 62 98 39c22 16 27 38 12 63ZM66 190C48 194 30 183 22 165c22-5 39 2 44 25ZM119 82c22-9 35-27 34-52-23 8-35 27-34 52Z"/><path d="M37 229c38-24 77-28 122-15" stroke-width="1"/><path d="M158 214c10-8 20-12 32-11M158 214c7 11 16 16 28 17" stroke-width="1"/><circle cx="173" cy="57" r="2" fill="#967557" stroke="none"/><circle cx="187" cy="73" r="1.7" fill="#967557" stroke="none"/><circle cx="168" cy="80" r="1.4" fill="#967557" stroke="none"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 330" role="img" aria-label="Delicate botanical branch with amber sun">
+  <defs>
+    <radialGradient id="sun"><stop stop-color="#E9C393" stop-opacity=".72"/><stop offset="1" stop-color="#E9C393" stop-opacity=".38"/></radialGradient>
+  </defs>
+  <circle cx="148" cy="132" r="62" fill="url(#sun)"/>
+  <g fill="none" stroke="#A87950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M29 291 Q97 267 173 290 T391 301"/>
+    <path d="M170 289 Q229 254 248 201 Q269 154 260 93"/>
+    <path d="M222 232 Q194 198 187 154"/>
+    <path d="M241 211 Q293 204 331 168"/>
+    <path d="M258 151 Q223 129 218 83"/>
+    <path d="M260 108 Q291 70 291 27"/>
+    <path d="M186 154 Q160 128 166 94 Q202 112 187 154Z" fill="#F6E9D9" fill-opacity=".35"/>
+    <path d="M218 83 Q194 54 195 30 Q235 45 260 108" fill="#F6E9D9" fill-opacity=".25"/>
+    <path d="M260 108 Q261 51 291 27 Q315 77 260 108Z" fill="#F6E9D9" fill-opacity=".35"/>
+    <path d="M241 211 Q280 157 331 168 Q310 203 241 211Z" fill="#F6E9D9" fill-opacity=".35"/>
+    <path d="M222 232 Q185 220 187 154 Q217 175 222 232Z" fill="#F6E9D9" fill-opacity=".25"/>
+    <path d="M195 30 Q231 74 260 108 M291 27 Q274 75 260 108 M166 94 Q181 125 187 154 M331 168 Q284 192 241 211 M187 154 Q206 203 222 232" stroke-width="1" opacity=".65"/>
+  </g>
+  <g fill="#B8885E" opacity=".75"><circle cx="111" cy="238" r="3.4"/><circle cx="130" cy="256" r="2.5"/><circle cx="98" cy="258" r="2"/></g>
+</svg>
