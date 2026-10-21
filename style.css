@@ -146,3 +146,8 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .photo-vitrine.has-photo .photo-label{display:none}
 .photo-vitrine.has-photo::before,.photo-vitrine.has-photo::after{display:none}
 @media(max-width:640px){.vitrine-wrap{max-width:340px;margin-inline:auto}.photo-vitrine{max-height:none}}
+
+/* V12: approved discovery layout, darker subheadings, larger portrait */
+.profile-image{width:60%;height:60%;max-height:360px}
+.discover-option h3{color:#211d19;font-weight:500}
+@media(max-width:640px){.profile-image{width:60%;height:60%;max-height:264px}}
