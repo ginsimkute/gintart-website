@@ -40,9 +40,9 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .footer-inner{min-height:80px}
 /* Gint Art logo size */
 .site-logo img {
-    width: 80px;
+    width: 100px;
     height: auto;
-    max-height: 80px;
+    max-height: 100px;
     object-fit: contain;
 }
 @media(max-width:900px){.site-header .nav{grid-template-columns:1fr 1fr;min-height:76px}.brand{grid-column:1;grid-row:1;justify-self:start}.lang-switch{grid-column:2;grid-row:1}.nav-left,.nav-right{grid-row:2;justify-content:center;grid-column:auto;padding-bottom:11px}.hero,.photo-hero{min-height:460px}.hero-copy{padding:48px 8%}.philosophy,.photo-nature{min-height:380px}}
