@@ -54,3 +54,41 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .gallery-note p{max-width:550px}
 .footer-inner{justify-content:space-between}
 @media(max-width:750px){.contact-botanical{left:auto;right:3%;top:10px;transform:rotate(-12deg);width:115px;opacity:.24}}
+
+
+/* V5 — consistent small headings and centred brand image */
+.eyebrow,
+.text-link,
+.nav-side,
+.discover-option h3 {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: .14em;
+}
+/* Both appearances of “Jedes Stück ein Unikat.” */
+.script.smaller,
+.gallery-script {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+/* Uploaded logo: displayed at 110 × 110 px, without distortion */
+.brand-upload {
+  width: 110px;
+  height: 110px;
+  max-width: 110px;
+  max-height: 110px;
+  object-fit: contain;
+}
+.site-header .nav { min-height: 126px; }
+@media (max-width: 900px) {
+  .site-header .nav { min-height: 126px; }
+  .nav-side { font-size: 13px; }
+}
+@media (max-width: 640px) {
+  .site-header .nav { min-height: 126px; }
+  .nav-side { font-size: 13px; letter-spacing: .06em; }
+}
+.brand { height: 110px; }
+.brand-upload { inset: 0; width: 110px; height: 110px; }
