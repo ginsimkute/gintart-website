@@ -127,3 +127,74 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .footer-inner{border-top:1px solid #cdb7a5}
 @media(max-width:900px){.site-header .nav{grid-template-columns:1fr 1fr;min-height:120px}.nav-side{font-size:12px}.gallery-heading{align-items:start}.contact-layout{column-gap:5%}}
 @media(max-width:640px){.site-header .nav{grid-template-columns:1fr 1fr;min-height:120px}.nav-side{font-size:11px;gap:9px}.eyebrow,.text-link,.discover-option h3{font-size:16px}.gallery-heading{display:flex;flex-direction:column;gap:12px}.gallery-script{text-align:left}.gallery-note{padding:24px 16px}.gallery-note h3{font-size:30px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-layout{grid-template-columns:1fr;row-gap:18px}.contact-art{grid-column:1;grid-row:1;min-height:100px;justify-content:flex-start}.contact-botanical{width:125px!important;max-height:125px}.contact-copy{grid-column:1;grid-row:2}.contact-links{grid-column:1;grid-row:3;flex-direction:column;align-items:flex-start;gap:12px;padding-top:18px}.contact-section{padding:52px 0}}
+
+
+/* V7 — consistent labels, open gallery composition, compact contact */
+:root { --section-label:#947456; }
+.eyebrow, .text-link, .nav-side a, .discover-option h3 {
+  font-family:'DM Sans',Arial,sans-serif !important;
+  font-size:14px !important;
+  font-weight:400 !important;
+  color:var(--section-label) !important;
+  letter-spacing:.11em;
+  line-height:1.5;
+}
+.nav-side a:hover,.text-link:hover {color:var(--ink)!important}
+/* The photo is replaceable simply by uploading images/profile.png */
+.photo-hero{position:relative;min-height:470px}
+.profile-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 35%;z-index:2}
+.photo-hero.has-photo .photo-label{display:none}
+.photo-hero.has-photo:before,.photo-hero.has-photo:after{display:none}
+/* Gallery: no card or sharp-edged box around the enquiry */
+.gallery-section{padding:65px 0 65px}
+.gallery-heading{align-items:center}
+.gallery-script{font-size:19px;font-weight:400}
+.gallery-intro{max-width:none;margin:12px 0 0;font-size:14px;text-align:left;line-height:1.5}
+.gallery-note{background:transparent;border:0;box-shadow:none;max-width:none;text-align:left;padding:0;margin:16px 0 28px}
+.gallery-note h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(25px,2.5vw,33px);font-weight:500;letter-spacing:-.01em;margin:0 0 8px}
+.gallery-note .outline-button{display:inline-flex;align-items:center;border:0;border-radius:999px;background:#987451;color:white;padding:12px 27px;margin:0;font-size:12px;font-weight:500}
+.gallery-note .outline-button:hover{background:#76563c}
+/* Contact: compact one-row composition on desktop */
+.contact-section{padding:30px 0 28px}
+.contact-layout{display:grid;grid-template-columns:90px minmax(190px,.9fr) minmax(250px,1.4fr) minmax(240px,1.15fr);gap:24px;align-items:center}
+.contact-art,.contact-copy,.contact-links{grid-column:auto;grid-row:auto;min-width:0}
+.contact-art{min-height:0;justify-content:center}
+.contact-botanical{width:76px!important;max-width:76px!important;max-height:110px!important;height:auto!important;opacity:.75!important}
+.contact-copy h2{font-size:clamp(31px,3vw,43px);line-height:1;margin:5px 0 0}
+.contact-copy p{display:none}
+.contact-links{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px;border:0;border-left:1px solid #cdb7a5;padding:0 0 0 22px;font-size:13px}
+.contact-links a{gap:9px;white-space:nowrap}
+.contact-links a span{font-size:18px}
+.contact-layout:after{content:'Wenn dich ein Stück interessiert oder du Fragen hast, freue ich mich auf deine Nachricht. Bitte gib bei Anfragen zur Galerie die Nummer des Stücks an.';display:none}
+/* Paragraph stays immediately beside the contact title and contact details */
+.contact-copy p{display:block;font-size:13px;line-height:1.55;margin:10px 0 0}
+.contact-layout{grid-template-columns:75px minmax(200px,1.15fr) minmax(245px,1.3fr) minmax(210px,1.05fr)}
+.contact-copy{display:contents}
+.contact-copy .eyebrow,.contact-copy h2{grid-column:2}
+.contact-copy .eyebrow{align-self:end}
+.contact-copy h2{align-self:start;margin-top:-8px}
+.contact-copy p{grid-column:3;grid-row:1 / span 2;align-self:center;margin:0;padding-left:20px;border-left:1px solid #cdb7a5}
+.contact-art{grid-column:1;grid-row:1 / span 2}
+.contact-links{grid-column:4;grid-row:1 / span 2}
+@media(max-width:1000px){
+ .contact-layout{grid-template-columns:60px minmax(170px,1fr) minmax(230px,1.3fr);gap:18px}
+ .contact-art{grid-column:1}.contact-copy .eyebrow,.contact-copy h2{grid-column:2}
+ .contact-copy p{grid-column:3;grid-row:1 / span 2}
+ .contact-links{grid-column:2 / -1;grid-row:3;border-left:0;border-top:1px solid #cdb7a5;padding:14px 0 0;flex-direction:row;flex-wrap:wrap}
+}
+@media(max-width:640px){
+ .eyebrow,.text-link,.nav-side a,.discover-option h3{font-size:14px!important}
+ .site-header .nav{grid-template-columns:1fr 1fr}
+ .nav-side{flex-wrap:wrap;gap:8px 13px}
+ .gallery-intro{line-height:1.55}
+ .gallery-note{margin:15px 0 24px;padding:0}
+ .gallery-note h3{font-size:27px}
+ .contact-layout{grid-template-columns:50px minmax(0,1fr);gap:8px 16px}
+ .contact-art{grid-column:1;grid-row:1 / span 2}
+ .contact-botanical{width:50px!important}
+ .contact-copy .eyebrow,.contact-copy h2{grid-column:2}
+ .contact-copy h2{margin:0}
+ .contact-copy p{grid-column:1 / -1;grid-row:3;padding:0;border:0;margin:8px 0}
+ .contact-links{grid-column:1 / -1;grid-row:4;flex-direction:column;align-items:flex-start;padding-top:12px}
+ .photo-hero{min-height:360px}
+}
