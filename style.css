@@ -38,12 +38,19 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .gallery-note{margin-top:38px}
 .contact-section{padding:68px 0}
 .footer-inner{min-height:80px}
-/* Gint Art logo size */
-.site-logo img {
-    width: 100px;
-    height: auto;
-    max-height: 100px;
-    object-fit: contain;
-}
 @media(max-width:900px){.site-header .nav{grid-template-columns:1fr 1fr;min-height:76px}.brand{grid-column:1;grid-row:1;justify-self:start}.lang-switch{grid-column:2;grid-row:1}.nav-left,.nav-right{grid-row:2;justify-content:center;grid-column:auto;padding-bottom:11px}.hero,.photo-hero{min-height:460px}.hero-copy{padding:48px 8%}.philosophy,.photo-nature{min-height:380px}}
 @media(max-width:640px){.site-header .nav{min-height:74px}.nav-side{font-size:9px;gap:10px}.hero,.photo-hero{min-height:unset}.hero-copy{padding:48px 7% 40px}.photo-hero{height:330px}.philosophy .photo-nature{height:260px;min-height:unset}.philosophy-copy{padding:45px 7%}.discover-section{padding:48px 0}.gallery-section{padding:50px 0}.contact-section{padding:55px 0}h1{font-size:clamp(48px,12vw,65px)}h2{font-size:clamp(38px,10vw,53px)}}
+
+/* V3: gallery enquiry before the photographs */
+.gallery-note{margin:18px auto 30px;max-width:600px}
+.gallery-note .outline-button{margin-top:10px}
+
+/* V4: gentle botanical contact detail, no footer diamond */
+.contact-grid{position:relative;isolation:isolate}
+.contact-grid > :not(.contact-botanical){position:relative;z-index:1}
+.contact-botanical{position:absolute;width:clamp(110px,15vw,215px);height:auto;left:43%;top:50%;transform:translate(-50%,-50%) rotate(-13deg);opacity:.52;pointer-events:none;z-index:0}
+.gallery-note{margin:12px auto 34px;max-width:630px}
+.gallery-note h3{font-family:'Caveat',cursive;font-weight:400;font-size:clamp(30px,3.3vw,44px);letter-spacing:0;line-height:1.1;margin:0 0 10px}
+.gallery-note p{max-width:550px}
+.footer-inner{justify-content:space-between}
+@media(max-width:750px){.contact-botanical{left:auto;right:3%;top:10px;transform:rotate(-12deg);width:115px;opacity:.24}}
