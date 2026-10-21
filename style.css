@@ -75,10 +75,10 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 }
 /* Uploaded logo: displayed at 110 × 110 px, without distortion */
 .brand-upload {
-  width: 110px;
-  height: 110px;
-  max-width: 110px;
-  max-height: 110px;
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  max-height: 100px;
   object-fit: contain;
 }
 .site-header .nav { min-height: 126px; }
