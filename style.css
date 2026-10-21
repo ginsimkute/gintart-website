@@ -75,10 +75,10 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 }
 /* Uploaded logo: displayed at 110 × 110 px, without distortion */
 .brand-upload {
-  width: 100px;
-  height: 100px;
-  max-width: 100px;
-  max-height: 100px;
+  width: 110px;
+  height: 110px;
+  max-width: 110px;
+  max-height: 110px;
   object-fit: contain;
 }
 .site-header .nav { min-height: 126px; }
@@ -198,3 +198,30 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
  .contact-links{grid-column:1 / -1;grid-row:4;flex-direction:column;align-items:flex-start;padding-top:12px}
  .photo-hero{min-height:360px}
 }
+
+
+/* V8: consolidated final gallery and contact layout; overrides legacy rules above. */
+:root{--label-brown:#987451}
+.eyebrow,.text-link,.nav-side a,.discover-option h3{font-family:'DM Sans',Arial,sans-serif!important;font-size:14px!important;font-weight:400!important;color:var(--label-brown)!important;letter-spacing:.10em!important}
+.brand,.brand-upload{width:110px;height:110px;object-fit:contain}
+.gallery-section{background:#e8d8c9;padding:62px 0 65px}
+.gallery-heading{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.gallery-heading h2{margin:8px 0 12px}
+.gallery-script{font-family:'Caveat',cursive!important;font-size:19px!important;font-weight:400!important;max-width:240px;text-align:right}
+.gallery-intro{font-size:14px;line-height:1.5;margin:0 0 14px;text-align:left;max-width:none}
+.gallery-note{background:none!important;border:0!important;box-shadow:none!important;max-width:none!important;text-align:left!important;padding:0!important;margin:0 0 30px!important}
+.gallery-note h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(25px,2.6vw,34px);font-weight:500;letter-spacing:0;margin:0 0 12px}
+.gallery-note .outline-button{border:0!important;border-radius:999px!important;background:#987451!important;color:#fff!important;padding:12px 27px!important;margin:0!important;font-size:12px!important;font-weight:500!important}
+.gallery-grid{margin-top:0;gap:12px}
+.contact-section{padding:32px 0!important;background:var(--cream)}
+.contact-section .contact-layout{display:grid!important;grid-template-columns:70px minmax(195px,1fr) minmax(240px,1.3fr) minmax(200px,1fr)!important;gap:20px!important;align-items:center!important}
+.contact-section .contact-art{grid-column:1!important;grid-row:1!important;min-height:0!important;display:flex!important;justify-content:center!important}
+.contact-section .contact-botanical{position:static!important;width:66px!important;max-width:66px!important;height:auto!important;max-height:100px!important;transform:none!important;opacity:.75!important}
+.contact-section .contact-copy{display:block!important;grid-column:2!important;grid-row:1!important;min-width:0!important}
+.contact-section .contact-copy .eyebrow,.contact-section .contact-copy h2{display:block!important;grid-column:auto!important;grid-row:auto!important}
+.contact-section .contact-copy h2{font-size:clamp(31px,3vw,43px)!important;line-height:1.08!important;margin:7px 0 0!important}
+.contact-section .contact-description{display:block!important;grid-column:3!important;grid-row:1!important;font-size:13px!important;line-height:1.6!important;margin:0!important;padding:0 0 0 20px!important;border-left:1px solid #cdb7a5!important;max-width:none!important}
+.contact-section .contact-links{display:flex!important;grid-column:4!important;grid-row:1!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:10px!important;margin:0!important;padding:0 0 0 20px!important;border:0!important;border-left:1px solid #cdb7a5!important;font-size:13px!important}
+.contact-section .contact-links a{white-space:normal!important;overflow-wrap:anywhere}
+@media(max-width:1000px){.contact-section .contact-layout{grid-template-columns:65px minmax(180px,1fr) minmax(230px,1.2fr)!important}.contact-section .contact-links{grid-column:2 / -1!important;grid-row:2!important;flex-direction:row!important;flex-wrap:wrap!important;border-left:0!important;border-top:1px solid #cdb7a5!important;padding:14px 0 0!important}.contact-section .contact-description{grid-column:3!important}}
+@media(max-width:640px){.gallery-section{padding:48px 0}.gallery-heading{align-items:flex-start;flex-direction:column;gap:5px}.gallery-script{text-align:left}.gallery-intro{max-width:100%}.gallery-note{margin:12px 0 24px!important}.contact-section .contact-layout{grid-template-columns:50px minmax(0,1fr)!important;gap:12px!important}.contact-section .contact-art{grid-column:1!important;grid-row:1!important}.contact-section .contact-botanical{width:48px!important}.contact-section .contact-copy{grid-column:2!important;grid-row:1!important}.contact-section .contact-description{grid-column:1/-1!important;grid-row:2!important;padding:0!important;border:0!important}.contact-section .contact-links{grid-column:1/-1!important;grid-row:3!important;flex-direction:column!important;align-items:flex-start!important;padding:14px 0 0!important}}
