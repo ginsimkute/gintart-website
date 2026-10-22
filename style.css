@@ -706,3 +706,64 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 @media (max-width: 900px) {
   .discover-grid .vitrine-wrap { width: min(80%, 310px) !important; }
 }
+
+
+/* V33 — 10% smaller vitrine compared with V32, retaining the full image. */
+.discover-grid .vitrine-wrap {
+  width: 72% !important;
+  max-width: 297px !important;
+}
+/* Two deliberately non-concentric, slightly rotated organic oval frames. */
+.discover-grid .vitrine-wrap::before {
+  width: 120% !important;
+  height: 113% !important;
+  top: -9% !important;
+  left: -10% !important;
+  transform: rotate(-9deg) !important;
+  border-color: rgba(153,107,72,.54) !important;
+}
+.discover-grid .vitrine-wrap::after {
+  width: 123% !important;
+  height: 108% !important;
+  top: -6% !important;
+  left: -11% !important;
+  transform: rotate(7deg) !important;
+  border-color: rgba(153,107,72,.30) !important;
+}
+/* About Me: a fuller, rounder portrait, with two more elongated oval outlines. */
+.photo-hero .profile-image {
+  width: 80% !important;
+  aspect-ratio: 1.17 / 1 !important;
+  height: auto !important;
+  object-fit: cover !important;
+  object-position: center 40% !important;
+}
+.photo-hero.has-photo::before, .photo-hero.has-photo::after {
+  display: block !important;
+  background: transparent !important;
+  pointer-events: none;
+}
+.photo-hero::before {
+  width: 92% !important;
+  height: 75% !important;
+  left: 4% !important;
+  top: 12.5% !important;
+  transform: rotate(-8deg) !important;
+  border-color: rgba(153,107,72,.52) !important;
+  border-radius: 52% 48% 51% 49% / 48% 52% 47% 53% !important;
+}
+.photo-hero::after {
+  width: 94% !important;
+  height: 72% !important;
+  left: 3% !important;
+  top: 14% !important;
+  transform: rotate(7deg) !important;
+  border-color: rgba(153,107,72,.34) !important;
+  border-radius: 49% 51% 48% 52% / 53% 47% 52% 48% !important;
+}
+@media (max-width: 900px) {
+  .discover-grid .vitrine-wrap { width: min(72%, 280px) !important; }
+}
+@media (max-width: 640px) {
+  .photo-hero .profile-image { width: 80% !important; aspect-ratio: 1.17 / 1 !important; }
+}
