@@ -631,3 +631,35 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 /* Keep all product images square. */
 .gallery-grid .gallery-photo { aspect-ratio: 1 / 1; }
 @media(max-width:640px) { .hero-copy h1 {font-size: clamp(35px, 8.3vw, 51px);} .hero-copy .script {font-size: 18px;} }
+
+/* V31: stronger warm oval outline around the portrait — colour only. */
+.photo-hero::after { border-color: rgba(153, 107, 72, .67) !important; }
+
+/* V31: one concise gallery line, with a handwritten, gentle enquiry link. */
+.gallery-heading .gallery-script { display: none !important; }
+.gallery-section .gallery-note > .outline-button {
+  font-family: 'Nothing You Could Do', 'Caveat', cursive !important;
+  font-size: 17px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  padding: 5px 14px !important;
+  border-color: rgba(145, 108, 78, .42) !important;
+  background: rgba(255,253,249,.26) !important;
+}
+.gallery-section .gallery-note > .gallery-intro { font-size: 13px !important; }
+
+/* V31: a delicate circular frame behind the vitrine, without cropping it. */
+.discover-grid .vitrine-wrap { position: relative; isolation: isolate; }
+.discover-grid .vitrine-wrap::before {
+  content: ''; position: absolute; z-index: -1;
+  width: min(94%, 305px); aspect-ratio: 1 / 1;
+  height: auto; top: 50%; left: 50%;
+  transform: translate(-50%, -57%);
+  border: 1px solid rgba(153, 107, 72, .52);
+  border-radius: 50%; background: transparent;
+  inset: auto; margin: 0;
+}
+.discover-grid .vitrine-wrap::after { display: none !important; }
+.discover-grid .vitrine-wrap .photo-vitrine { position: relative; z-index: 1; }
+.discover-grid .vitrine-wrap .vitrine-caption { position: relative; z-index: 2; }
