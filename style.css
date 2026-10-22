@@ -414,3 +414,27 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .contact-links a svg { width:17px; height:17px; flex:0 0 17px; stroke:var(--accent); fill:none; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
 @media(max-width:900px){ .vitrine-wrap{ width:min(76%,340px); } }
 @media(max-width:640px){ .vitrine-wrap{ width:min(80%,290px); } .contact-links .contact-name{font-size:24px;} }
+
+
+/* V22 — uniformly feathered vitrine edges and compact contact details */
+.photo-vitrine {
+  -webkit-mask-image: radial-gradient(ellipse closest-side at center, #000 32%, rgba(0,0,0,.97) 44%, rgba(0,0,0,.72) 60%, rgba(0,0,0,.28) 78%, transparent 100%);
+  mask-image: radial-gradient(ellipse closest-side at center, #000 32%, rgba(0,0,0,.97) 44%, rgba(0,0,0,.72) 60%, rgba(0,0,0,.28) 78%, transparent 100%);
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+}
+.contact-links { gap: 7px; }
+.contact-links .contact-name {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+.contact-links a { gap: 9px; line-height: 1.55; }
+.contact-links a svg { width: 16px; height: 16px; flex-basis: 16px; }
+@media (max-width: 640px) {
+  .contact-links { gap: 7px; }
+  .contact-links .contact-name { font-size: 14px; }
+}
