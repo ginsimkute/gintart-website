@@ -475,3 +475,32 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 /* V25 — smaller About Me heading; black contact details. */
 .hero-copy h1 { font-size: clamp(55px, 6.1vw, 96px); }
 .contact-links a span { color: var(--ink); }
+
+
+/* V26 — clean, clear vitrine photo; no feathering, frame, or decorative overlays. */
+.vitrine-wrap { width: 100%; max-width: 320px; margin: 0 auto; padding: 0; }
+.vitrine-wrap::before, .vitrine-wrap::after,
+.photo-vitrine::before, .photo-vitrine::after { content: none !important; display: none !important; }
+.photo-vitrine {
+  width: 100%; height: auto; aspect-ratio: 4 / 3;
+  border-radius: 8px; overflow: hidden; background: transparent;
+  -webkit-mask-image: none !important; mask-image: none !important;
+  box-shadow: none;
+}
+.photo-vitrine .vitrine-image {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: center; border-radius: 8px;
+  filter: none; opacity: 1;
+}
+.vitrine-caption {
+  margin: 9px 0 0; text-align: center; white-space: nowrap;
+  font-family: 'Nothing You Could Do', 'Caveat', cursive;
+  font-size: clamp(15px, 1.35vw, 19px); font-weight: 400;
+}
+@media (max-width: 900px) {
+  .vitrine-wrap { width: min(100%, 320px); max-width: 320px; }
+}
+@media (max-width: 640px) {
+  .vitrine-wrap { width: min(100%, 320px); }
+  .vitrine-caption { white-space: normal; }
+}
