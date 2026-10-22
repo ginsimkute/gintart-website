@@ -911,3 +911,44 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .philosophy-copy .script.smaller { font-weight: 400 !important; font-style: italic; }
 .philosophy-copy h2 { margin-top: 0; }
 .philosophy-copy p { line-height: 1.85; }
+
+/* V40 — cosmetic refinements only; section layout unchanged. */
+/* About: 20% smaller pale filled egg; photo taller and subtly diagonal. */
+.photo-hero .portrait-backdrop {
+  width: 71.2% !important; height: 68.8% !important;
+  left: 14.4% !important; top: 15.6% !important;
+  border-radius: 61% 39% 52% 48% / 53% 47% 58% 42% !important;
+  transform: rotate(-14deg) !important;
+}
+.photo-hero .profile-image {
+  width: 79% !important; aspect-ratio: 1.25 / 1 !important;
+  border-radius: 61% 39% 54% 46% / 55% 45% 59% 41% !important;
+  transform: rotate(-7deg) !important;
+  object-fit: cover !important; object-position: center 40% !important;
+}
+/* Vitrine: shrink the pale egg 20%; make the photograph taller. */
+.discover-grid .vitrine-wrap .vitrine-backdrop {
+  width: 75.2% !important; height: 61.6% !important;
+  left: 12.4% !important; top: 10.7% !important;
+  border-radius: 60% 40% 53% 47% / 54% 46% 59% 41% !important;
+  transform: rotate(-13deg) !important;
+}
+.discover-grid .vitrine-wrap .photo-vitrine {
+  width: 70% !important; aspect-ratio: 1.23 / 1 !important;
+  border-radius: 60% 40% 54% 46% / 55% 45% 59% 41% !important;
+  transform: rotate(-6deg) !important;
+}
+.discover-grid .vitrine-wrap .photo-vitrine img {
+  object-fit: cover !important; object-position: center center !important;
+  transform: rotate(6deg) scale(1.03) !important;
+}
+/* Larger but still light handwritten statement. */
+.philosophy-copy .script.smaller {
+  font-family: 'Nothing You Could Do','Caveat',cursive !important;
+  font-size: clamp(32px, 3.5vw, 52px) !important;
+  font-weight: 400 !important; font-style: normal !important; line-height: 1.25 !important;
+}
+@media(max-width:640px) {
+  .photo-hero .profile-image { width: 79% !important; }
+  .philosophy-copy .script.smaller { font-size: clamp(29px, 7vw, 40px) !important; }
+}
