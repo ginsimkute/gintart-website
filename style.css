@@ -801,3 +801,25 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .photo-hero .portrait-backdrop { width: 96%; left: 2%; }
   .discover-grid .vitrine-wrap .vitrine-backdrop { height: 85%; top: 5%; }
 }
+
+/* V37 — three distinct, non-overlapping organic layers around both images. */
+.photo-hero { overflow:visible !important; isolation:isolate !important; }
+.photo-hero .portrait-backdrop {
+  display:block !important; position:absolute !important;
+  width:96% !important; height:92% !important; left:2% !important; top:4% !important;
+  background:#f3e9de !important; opacity:.75 !important;
+  border:0 !important; border-radius:58% 42% 51% 49% / 48% 58% 42% 52% !important;
+  transform:rotate(-7deg) !important; z-index:0 !important;
+}
+.photo-hero::before { width:88% !important; height:82% !important; left:6% !important; top:9% !important; transform:rotate(-8deg) !important; border-color:rgba(163,119,85,.48) !important; z-index:1 !important; }
+.photo-hero::after { width:85% !important; height:78% !important; left:7.5% !important; top:11% !important; transform:rotate(6deg) !important; border-color:rgba(163,119,85,.36) !important; z-index:1 !important; }
+.photo-hero .profile-image { width:76% !important; height:auto !important; aspect-ratio:1.15/1 !important; object-fit:cover !important; object-position:center 40% !important; border-radius:56% 44% 51% 49% / 49% 56% 44% 51% !important; transform:rotate(-1deg) !important; z-index:2 !important; }
+/* The vitrine PNG is transparent: show it in full using contain, not cover. */
+.discover-grid .vitrine-wrap { min-height:260px !important; padding:10px 0 4px !important; overflow:visible !important; }
+.discover-grid .vitrine-wrap .vitrine-backdrop { width:88% !important; height:82% !important; left:6% !important; top:2% !important; border-radius:54% 46% 52% 48% / 48% 55% 45% 52% !important; background:#f3e9de !important; opacity:.75 !important; transform:rotate(-6deg) !important; z-index:0 !important; }
+.discover-grid .vitrine-wrap::before { width:80% !important; height:73% !important; left:10% !important; top:7% !important; transform:rotate(8deg) !important; border-color:rgba(163,119,85,.5) !important; z-index:1 !important; }
+.discover-grid .vitrine-wrap::after { display:block !important; width:77% !important; height:70% !important; left:11.5% !important; top:8.5% !important; transform:rotate(-7deg) !important; border-color:rgba(163,119,85,.35) !important; z-index:1 !important; }
+.discover-grid .vitrine-wrap .photo-vitrine { width:58.5% !important; height:auto !important; aspect-ratio:4/3 !important; overflow:visible !important; border-radius:0 !important; background:transparent !important; z-index:2 !important; }
+.discover-grid .vitrine-wrap .photo-vitrine img { position:relative !important; inset:auto !important; width:100% !important; height:auto !important; object-fit:contain !important; object-position:center !important; border-radius:0 !important; }
+.discover-grid .vitrine-wrap .vitrine-caption { margin-top:7px !important; position:relative !important; z-index:3 !important; }
+@media(max-width:640px) { .photo-hero .profile-image{width:74% !important;} .discover-grid .vitrine-wrap{min-height:230px !important;} }
