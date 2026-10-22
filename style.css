@@ -771,3 +771,33 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .photo-hero .profile-image { width: 82% !important; }
   .discover-grid .vitrine-wrap { min-height: 250px !important; }
 }
+
+/* V36 — third, pale filled organic frame OUTSIDE the two fine outlines.
+   The outer layer stays behind the portrait/vitrine and leaves a visible gap. */
+.photo-hero { position: relative !important; isolation: isolate !important; overflow: visible !important; background: var(--ivory) !important; }
+.photo-hero .portrait-backdrop {
+  position: absolute; display: block; pointer-events: none;
+  width: 97%; height: 91%; left: 1.5%; top: 4.5%;
+  background: #f5ece3; opacity: .72;
+  border-radius: 51% 49% 54% 46% / 47% 53% 48% 52%;
+  transform: rotate(-5deg); z-index: 0;
+}
+.photo-hero::before { z-index: 1 !important; width: 86% !important; height: 76% !important; left: 7% !important; top: 12% !important; }
+.photo-hero::after { z-index: 1 !important; width: 89% !important; height: 79% !important; left: 5.5% !important; top: 10.5% !important; }
+.photo-hero .profile-image { z-index: 2 !important; width: 76% !important; aspect-ratio: 1.13/1 !important; }
+.discover-grid .vitrine-wrap { position: relative !important; isolation: isolate !important; }
+.discover-grid .vitrine-wrap .vitrine-backdrop {
+  position: absolute; display: block; pointer-events: none;
+  width: 98%; height: 91%; left: 1%; top: 3%;
+  background: #f5ece3; opacity: .72;
+  border-radius: 52% 48% 51% 49% / 48% 52% 46% 54%;
+  transform: rotate(5deg); z-index: 0;
+}
+.discover-grid .vitrine-wrap::before { z-index: 1 !important; width: 84% !important; height: 78% !important; left: 8% !important; top: 8% !important; }
+.discover-grid .vitrine-wrap::after { z-index: 1 !important; width: 87% !important; height: 80% !important; left: 6.5% !important; top: 7% !important; }
+.discover-grid .vitrine-wrap .photo-vitrine { z-index: 2 !important; width: 65% !important; }
+.discover-grid .vitrine-wrap .vitrine-caption { z-index: 3 !important; }
+@media (max-width:640px) {
+  .photo-hero .portrait-backdrop { width: 96%; left: 2%; }
+  .discover-grid .vitrine-wrap .vitrine-backdrop { height: 85%; top: 5%; }
+}
