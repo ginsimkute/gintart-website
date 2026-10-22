@@ -438,3 +438,40 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .contact-links { gap: 7px; }
   .contact-links .contact-name { font-size: 14px; }
 }
+
+
+/* V24 — preserve the vitrine's soft edges while revealing more of its centre. */
+.photo-vitrine {
+  -webkit-mask-image: radial-gradient(ellipse closest-side at center,
+    #000 0%, #000 43%, rgba(0,0,0,.98) 52%,
+    rgba(0,0,0,.83) 64%, rgba(0,0,0,.43) 81%, transparent 100%);
+  mask-image: radial-gradient(ellipse closest-side at center,
+    #000 0%, #000 43%, rgba(0,0,0,.98) 52%,
+    rgba(0,0,0,.83) 64%, rgba(0,0,0,.43) 81%, transparent 100%);
+}
+/* Restore a horizontally elongated organic oval for the About Me portrait. */
+.photo-hero::before {
+  width: 89%; height: 70%; left: 5.5%; top: 15%;
+  border-radius: 53% 47% 49% 51% / 48% 52% 47% 53%;
+}
+.photo-hero::after {
+  width: 91%; height: 68%; left: 4.5%; top: 16%;
+  transform: rotate(-8deg);
+  border-radius: 52% 48% 51% 49% / 48% 52% 47% 53%;
+}
+.photo-hero .profile-image {
+  width: 82%;
+  aspect-ratio: 1.48 / 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center 39%;
+}
+@media (max-width: 640px) {
+  .photo-hero .profile-image { width: 84%; aspect-ratio: 1.42 / 1; }
+  .photo-hero::before { height: 72%; top: 14%; }
+  .photo-hero::after { height: 70%; top: 15%; }
+}
+
+/* V25 — smaller About Me heading; black contact details. */
+.hero-copy h1 { font-size: clamp(55px, 6.1vw, 96px); }
+.contact-links a span { color: var(--ink); }
