@@ -982,3 +982,34 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .hero-copy .script { white-space: normal; font-size: 18px !important; }
   .philosophy-copy .script.smaller { font-size: 30px !important; }
 }
+
+/* V42 — handmade photo: same organic visual language as portrait and vitrine,
+   without changing the existing two-column section layout. */
+.philosophy .photo-nature {
+  isolation:isolate; overflow:hidden; background:#e8d9c9;
+  padding:28px 32px; min-height:390px;
+}
+.philosophy .photo-nature::before,
+.philosophy .photo-nature::after { content:none !important; }
+.photo-nature .nature-backdrop {
+  position:absolute; width:86%; height:88%; z-index:0;
+  background:#f4e9de; border-radius:47% 53% 44% 56% / 53% 44% 56% 47%;
+  transform:rotate(-10deg);
+}
+.photo-nature .nature-outline {
+  position:absolute; width:88%; height:87%; z-index:1; pointer-events:none;
+  border:1px solid rgba(164,120,86,.45);
+  border-radius:46% 54% 50% 50% / 55% 43% 57% 45%;
+}
+.photo-nature .nature-outline-one {transform:rotate(9deg) translate(-2%,1%)}
+.photo-nature .nature-outline-two {transform:rotate(-13deg) translate(2%,-1%); opacity:.7}
+.photo-nature .nature-image {
+  position:relative; z-index:2; display:block; width:81%; height:84%;
+  object-fit:cover; object-position:center 54%;
+  border-radius:49% 51% 46% 54% / 54% 45% 55% 46%;
+  transform:rotate(-5deg);
+}
+@media(max-width:760px){
+  .philosophy .photo-nature {height:320px; min-height:320px; padding:20px}
+  .photo-nature .nature-image {height:84%; width:76%}
+}
