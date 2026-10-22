@@ -823,3 +823,72 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .discover-grid .vitrine-wrap .photo-vitrine img { position:relative !important; inset:auto !important; width:100% !important; height:auto !important; object-fit:contain !important; object-position:center !important; border-radius:0 !important; }
 .discover-grid .vitrine-wrap .vitrine-caption { margin-top:7px !important; position:relative !important; z-index:3 !important; }
 @media(max-width:640px) { .photo-hero .profile-image{width:74% !important;} .discover-grid .vitrine-wrap{min-height:230px !important;} }
+
+/* V38 — Option 1: two offset, unfilled asymmetric rings and one pale filled ring.
+   Both photographs are horizontal, softly irregular egg shapes. */
+.photo-hero .portrait-backdrop {
+  width: 99% !important; height: 94% !important;
+  left: 0.5% !important; top: 3% !important;
+  background: #f3e9de !important; opacity: .78 !important;
+  border-radius: 58% 42% 55% 45% / 59% 46% 54% 41% !important;
+  transform: rotate(-11deg) !important;
+}
+.photo-hero::before {
+  width: 91% !important; height: 83% !important;
+  left: 4.5% !important; top: 9% !important;
+  border-radius: 55% 45% 52% 48% / 54% 48% 52% 46% !important;
+  transform: rotate(-12deg) !important;
+  background: transparent !important;
+}
+.photo-hero::after {
+  width: 87% !important; height: 79% !important;
+  left: 6.5% !important; top: 11% !important;
+  border-radius: 48% 52% 56% 44% / 47% 56% 44% 53% !important;
+  transform: rotate(9deg) !important;
+  background: transparent !important;
+}
+.photo-hero .profile-image {
+  width: 79% !important; aspect-ratio: 1.48 / 1 !important;
+  border-radius: 57% 43% 54% 46% / 59% 45% 55% 41% !important;
+  transform: rotate(-2deg) !important;
+  object-fit: cover !important; object-position: center 42% !important;
+}
+.discover-grid .vitrine-wrap { min-height: 245px !important; }
+.discover-grid .vitrine-wrap .vitrine-backdrop {
+  width: 94% !important; height: 77% !important;
+  left: 3% !important; top: 3% !important;
+  border-radius: 56% 44% 53% 47% / 57% 44% 56% 43% !important;
+  transform: rotate(-10deg) !important;
+  background: #f3e9de !important; opacity: .78 !important;
+}
+.discover-grid .vitrine-wrap::before {
+  width: 87% !important; height: 71% !important;
+  left: 6.5% !important; top: 6% !important;
+  border-radius: 54% 46% 51% 49% / 55% 47% 53% 45% !important;
+  transform: rotate(-11deg) !important;
+  background: transparent !important;
+}
+.discover-grid .vitrine-wrap::after {
+  width: 83% !important; height: 68% !important;
+  left: 8.5% !important; top: 8% !important;
+  border-radius: 47% 53% 55% 45% / 48% 56% 44% 52% !important;
+  transform: rotate(8deg) !important;
+  background: transparent !important;
+}
+.discover-grid .vitrine-wrap .photo-vitrine {
+  width: 70% !important; aspect-ratio: 1.55 / 1 !important;
+  height: auto !important; overflow: hidden !important;
+  border-radius: 56% 44% 54% 46% / 58% 46% 54% 42% !important;
+  transform: rotate(-2deg) !important;
+  background: transparent !important;
+}
+.discover-grid .vitrine-wrap .photo-vitrine img {
+  display: block !important; width: 100% !important; height: 100% !important;
+  object-fit: cover !important; object-position: center 44% !important;
+  border-radius: inherit !important; transform: rotate(2deg) scale(1.03) !important;
+}
+.discover-grid .vitrine-wrap .vitrine-caption { margin-top: 12px !important; }
+@media(max-width:640px){
+  .photo-hero .profile-image { width: 79% !important; }
+  .discover-grid .vitrine-wrap { min-height: 220px !important; }
+}
