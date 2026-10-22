@@ -952,3 +952,33 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .photo-hero .profile-image { width: 79% !important; }
   .philosophy-copy .script.smaller { font-size: clamp(29px, 7vw, 40px) !important; }
 }
+
+/* V41 — targeted cosmetic adjustments; section grids and spacing unchanged. */
+.hero-copy .script { white-space: nowrap; font-size: clamp(15px, 1.45vw, 20px) !important; }
+.photo-hero .portrait-backdrop {
+  width: 78.3% !important; height: 75.7% !important;
+  left: 10.85% !important; top: 12.15% !important;
+  background: #f1e6db !important; opacity: .78 !important;
+}
+.philosophy-copy .script.smaller { font-size: clamp(26px, 2.65vw, 39px) !important; }
+.discover-section .eyebrow.centered { text-align: left !important; }
+.discover-grid .vitrine-wrap .vitrine-backdrop {
+  width: 79% !important; height: 64.7% !important;
+  left: 10.5% !important; top: 9.2% !important;
+  background: #f1e6db !important; opacity: .9 !important;
+}
+/* Keep the entire transparent PNG visible, including the base of the cabinet. */
+.discover-grid .vitrine-wrap .photo-vitrine {
+  height: auto !important; aspect-ratio: auto !important;
+  overflow: visible !important; border-radius: 0 !important;
+  transform: none !important; background: transparent !important;
+}
+.discover-grid .vitrine-wrap .photo-vitrine img {
+  display: block !important; width: 100% !important; height: auto !important;
+  object-fit: contain !important; transform: none !important;
+  border-radius: 0 !important; clip-path: none !important;
+}
+@media (max-width: 640px) {
+  .hero-copy .script { white-space: normal; font-size: 18px !important; }
+  .philosophy-copy .script.smaller { font-size: 30px !important; }
+}
