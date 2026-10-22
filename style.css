@@ -892,3 +892,22 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .photo-hero .profile-image { width: 79% !important; }
   .discover-grid .vitrine-wrap { min-height: 220px !important; }
 }
+
+/* V39: subtle refinements to the About Me portrait and product philosophy */
+@media (min-width: 641px) {
+  .photo-hero .portrait-backdrop {
+    width: 89% !important; height: 86% !important; left: 5.5% !important; top: 7% !important;
+    border-radius: 60% 40% 53% 47% / 55% 44% 56% 45% !important;
+  }
+  .photo-hero::before {
+    width: 85% !important; height: 79% !important; left: 7.5% !important; top: 10.5% !important;
+    border-color: rgba(169,123,85,.48) !important;
+  }
+  .photo-hero::after {
+    width: 82% !important; height: 76% !important; left: 9% !important; top: 12% !important;
+    border-color: rgba(169,123,85,.37) !important;
+  }
+}
+.philosophy-copy .script.smaller { font-weight: 400 !important; font-style: italic; }
+.philosophy-copy h2 { margin-top: 0; }
+.philosophy-copy p { line-height: 1.85; }
