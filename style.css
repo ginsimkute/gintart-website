@@ -663,3 +663,32 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .discover-grid .vitrine-wrap::after { display: none !important; }
 .discover-grid .vitrine-wrap .photo-vitrine { position: relative; z-index: 1; }
 .discover-grid .vitrine-wrap .vitrine-caption { position: relative; z-index: 2; }
+
+
+/* V34 — based on V31: smooth egg-shaped portrait, two offset oval outlines. */
+.photo-hero { position: relative; isolation: isolate; }
+.photo-hero .profile-image {
+  width: 80% !important; height: auto !important; aspect-ratio: 1.17 / 1 !important;
+  object-fit: cover !important; object-position: center 42% !important;
+  /* Smooth egg-like contour, without scallops or angular edges. */
+  border-radius: 49% 51% 47% 53% / 54% 53% 47% 46% !important;
+  clip-path: none !important; mask-image: none !important; -webkit-mask-image: none !important;
+  transform: none !important; position: relative; z-index: 2;
+}
+.photo-hero::before {
+  content: '' !important; display: block !important; position: absolute !important;
+  width: 89% !important; height: 76% !important; left: 5.5% !important; top: 12% !important;
+  border: 1px solid rgba(157,112,78,.52) !important;
+  border-radius: 50% 50% 48% 52% / 52% 49% 51% 48% !important;
+  background: none !important; transform: rotate(-10deg) !important; z-index: 3 !important;
+  pointer-events: none !important;
+}
+.photo-hero::after {
+  content: '' !important; display: block !important; position: absolute !important;
+  width: 92% !important; height: 79% !important; left: 3.5% !important; top: 10% !important;
+  border: 1px solid rgba(174,134,101,.39) !important;
+  border-radius: 51% 49% 52% 48% / 49% 53% 47% 51% !important;
+  background: none !important; transform: rotate(8deg) !important; z-index: 3 !important;
+  pointer-events: none !important;
+}
+@media(max-width:640px){.photo-hero .profile-image{width:82% !important;}}
