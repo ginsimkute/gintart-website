@@ -284,3 +284,11 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
  .photo-hero .profile-image { transform: translateY(7px); }
  .hero-story p { margin-bottom: 12px; }
 }
+
+/* V17 — subtle About Me refinements */
+/* Make the fine oval around the portrait approximately 18% more visible. */
+.photo-hero::after { border-color: rgba(170,132,98,.57); }
+/* Give the three story paragraphs an extra 5px of breathing room. */
+.hero-copy .hero-story p { margin-bottom: 18px; }
+.hero-copy .hero-story p:last-child { margin-bottom: 0; }
+@media (max-width: 640px) { .hero-copy .hero-story p { margin-bottom: 17px; } }
