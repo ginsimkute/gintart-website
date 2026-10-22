@@ -504,3 +504,7 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .vitrine-wrap { width: min(100%, 320px); }
   .vitrine-caption { white-space: normal; }
 }
+
+/* V27 — shorter vitrine photo: crop from the bottom, retain full width. */
+.photo-vitrine { aspect-ratio: 1.55 / 1; }
+.photo-vitrine .vitrine-image { object-fit: cover; object-position: center top; }
