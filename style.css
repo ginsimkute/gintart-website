@@ -1059,3 +1059,19 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .hero-copy .script, .philosophy-copy .script.smaller { font-size: clamp(20px, 4.2vw, 26px) !important; }
   .photo-nature .nature-image { width: 64.8% !important; height: 67.2% !important; }
 }
+
+/* V44 — restore body copy to 16px, subtly adjust image proportions. */
+.hero-copy .hero-story, .hero-copy .hero-story p,
+.philosophy-copy > p:not(.script),
+.discover-option > p, .discover-option address,
+.gallery-intro, .gallery-note .gallery-intro,
+.gallery-section .gallery-note > .gallery-intro,
+.contact-description, .contact-grid p:not(.script),
+.discover-grid .vitrine-caption { font-size: 16px !important; }
+/* About: beige backdrop 5% smaller than V43; portrait unchanged. */
+.photo-hero .portrait-backdrop {
+  width: 78.1% !important; height: 75.5% !important;
+  left: 10.95% !important; top: 12.2% !important;
+}
+/* Vitrine: oval shape and crop retained; photo 5% smaller. */
+.discover-grid .vitrine-wrap .photo-vitrine { width: 73.15% !important; }
