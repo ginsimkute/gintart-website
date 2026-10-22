@@ -1013,3 +1013,49 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .philosophy .photo-nature {height:320px; min-height:320px; padding:20px}
   .photo-nature .nature-image {height:84%; width:76%}
 }
+
+
+/* V43 — consistent readable copy and balanced organic imagery. */
+/* Both handwritten statements use the same responsive sizing. */
+.hero-copy .script,
+.philosophy-copy .script.smaller {
+  font-size: clamp(20px, 1.8vw, 26px) !important;
+  font-weight: 400 !important;
+}
+/* Paragraph and supporting copy; headings and navigation are unchanged. */
+.hero-copy .hero-story, .hero-copy .hero-story p,
+.philosophy-copy > p:not(.script),
+.discover-option > p, .discover-option address,
+.gallery-intro, .gallery-note .gallery-intro,
+.contact-description, .contact-grid p:not(.script),
+.discover-grid .vitrine-caption { font-size: 17px !important; }
+/* About: increase the pale filled organic shape by about 5%, without changing the portrait. */
+.photo-hero .portrait-backdrop {
+  width: 82.2% !important; height: 79.5% !important;
+  left: 8.9% !important; top: 10.2% !important;
+}
+/* Handmade photo and its framing are 20% smaller; filled shape reduced a further 10%. */
+.philosophy .photo-nature { min-height: 390px; }
+.photo-nature .nature-image { width: 64.8% !important; height: 67.2% !important; }
+.photo-nature .nature-outline { width: 70.4% !important; height: 69.6% !important; }
+.photo-nature .nature-backdrop { width: 61.9% !important; height: 63.4% !important; }
+/* Vitrine: organic asymmetric oval crop, not a rectangular photograph.
+   Keep a natural 4:3-ish ratio and center the cabinet to preserve its base. */
+.discover-grid .vitrine-wrap .photo-vitrine {
+  width: 77% !important; aspect-ratio: 1.33 / 1 !important;
+  height: auto !important; overflow: hidden !important;
+  border-radius: 56% 44% 53% 47% / 49% 57% 43% 51% !important;
+  transform: rotate(-3deg) !important;
+  background: #f1e6db !important;
+}
+.discover-grid .vitrine-wrap .photo-vitrine > img.vitrine-image {
+  display: block !important; width: 100% !important; height: 100% !important;
+  aspect-ratio: 1.33 / 1 !important; object-fit: cover !important;
+  object-position: center 52% !important;
+  border-radius: inherit !important; clip-path: none !important;
+  transform: rotate(3deg) scale(1.015) !important;
+}
+@media (max-width: 760px) {
+  .hero-copy .script, .philosophy-copy .script.smaller { font-size: clamp(20px, 4.2vw, 26px) !important; }
+  .photo-nature .nature-image { width: 64.8% !important; height: 67.2% !important; }
+}
