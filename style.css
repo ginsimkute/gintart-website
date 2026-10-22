@@ -151,3 +151,24 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .profile-image{width:60%;height:60%;max-height:360px}
 .discover-option h3{color:#211d19;font-weight:500}
 @media(max-width:640px){.profile-image{width:60%;height:60%;max-height:264px}}
+
+/* Version 13 — organic portrait silhouette (replaces the arched window). */
+.photo-hero .profile-image {
+  width: 60%;
+  height: 60%;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 29% 18% 25% 13% / 19% 26% 17% 28%;
+  box-shadow: none;
+}
+.photo-hero.has-photo::before,
+.photo-hero.has-photo::after { display: none; }
+@media (max-width: 640px) {
+  .photo-hero .profile-image {
+    width: 60%;
+    height: 60%;
+    max-height: 264px;
+    border-radius: 29% 18% 25% 13% / 19% 26% 17% 28%;
+  }
+}
