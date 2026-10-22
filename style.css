@@ -292,3 +292,69 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 .hero-copy .hero-story p { margin-bottom: 18px; }
 .hero-copy .hero-story p:last-child { margin-bottom: 0; }
 @media (max-width: 640px) { .hero-copy .hero-story p { margin-bottom: 17px; } }
+
+
+/* V18 — discovery section: aligned columns, legible numbers, organic vitrine */
+.discover-grid { align-items: start; }
+.discover-option { min-height: 0; }
+.discover-option + .discover-option { align-self: stretch; }
+.option-number {
+  font-family: 'DM Sans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: .06em;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: #a77e5b;
+  margin-bottom: 12px;
+}
+.discover-option h3 {
+  margin: 0 0 17px;
+  min-height: 21px;
+  color: #211d19;
+}
+.discover-option p { margin: 0; line-height: 1.75; }
+.discover-option address { margin-top: 20px; }
+.vitrine-wrap { position: relative; isolation: isolate; padding: 14px 4px 0; }
+.vitrine-wrap::before {
+  content: ''; position: absolute; z-index: -1;
+  inset: -7px -12px 25px -13px;
+  background: radial-gradient(ellipse at 52% 50%, rgba(229,207,184,.48),rgba(246,234,220,.22) 65%, transparent 76%);
+  border-radius: 45% 55% 51% 49% / 55% 44% 56% 45%;
+  transform: rotate(-5deg);
+}
+.vitrine-wrap::after {
+  content: ''; position: absolute; z-index: 2; pointer-events: none;
+  top: 2px; left: -10px; width: calc(100% + 18px); height: 82%;
+  border: 1px solid rgba(170,132,98,.40);
+  border-radius: 51% 49% 44% 56% / 49% 53% 47% 51%;
+  transform: rotate(-10deg);
+}
+.photo-vitrine {
+  aspect-ratio: 4 / 3;
+  height: auto;
+  max-height: none;
+  background: transparent;
+  -webkit-mask-image: url('images/vitrine-mask.svg');
+  mask-image: url('images/vitrine-mask.svg');
+  -webkit-mask-size: 100% 100%; mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+}
+.vitrine-caption {
+  font-family: 'Nothing You Could Do', 'Caveat', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #906d50;
+  margin-top: 14px;
+}
+@media (max-width: 900px) {
+  .discover-grid { align-items: start; }
+  .vitrine-wrap { max-width: 360px; }
+}
+@media (max-width: 640px) {
+  .discover-option h3 { min-height: 0; }
+  .vitrine-wrap { margin-inline: auto; }
+}
