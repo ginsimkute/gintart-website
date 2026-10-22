@@ -537,3 +537,49 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
   .photo-hero::before { height: 79%; top: 10.5%; }
   .photo-hero::after { height: 76%; top: 12%; }
 }
+
+
+/* V29 — show the complete vitrine without cropping. */
+.photo-vitrine {
+  aspect-ratio: auto !important;
+  height: auto !important;
+  max-height: none !important;
+  min-height: 0 !important;
+  display: block;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+}
+.photo-vitrine .vitrine-image {
+  position: relative !important;
+  inset: auto !important;
+  display: block;
+  width: 100%;
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 0;
+}
+/* V29 — a compact, single-line gallery enquiry prompt on desktop. */
+.gallery-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 16px;
+  row-gap: 10px;
+}
+.gallery-note .gallery-intro {
+  margin: 0;
+}
+.gallery-note .outline-button {
+  padding: 8px 16px;
+  font-size: 10px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .gallery-note { column-gap: 12px; }
+  .gallery-note .outline-button { padding: 8px 13px; }
+}
