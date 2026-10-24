@@ -4,3 +4,5 @@ V43: unified handwritten text sizes (min 20px); paragraph copy 17px; portrait ba
 
 
 V44: Paragraph and supporting text returned to 16px, including gallery intro. About beige backdrop reduced 5%; vitrine oval image reduced 5% without changing its shape.
+
+V45: Updated Über mich and Natürliche Inspiration paragraphs in German and English; all styling unchanged.
