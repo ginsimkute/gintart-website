@@ -10,3 +10,5 @@ V45: Updated Über mich and Natürliche Inspiration paragraphs in German and Eng
 V46: About section wording refined in German, second Gint Art emphasis removed in both languages, paragraph spacing tightened. All other styling unchanged.
 
 V47: Über mich – subtle oval-following paragraph edge on wide screens only; no changes to text, imagery, or other sections.
+
+V48: Updated second paragraph in Natürliche Inspiration (German and English). All styling unchanged.
