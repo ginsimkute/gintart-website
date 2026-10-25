@@ -1123,3 +1123,18 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
     );
   }
 }
+
+
+/* V50 — restore straight-edged About paragraphs; no oval text wrapping. */
+.hero-copy .hero-story::before, .hero-copy .hero-story::after {
+  content: none !important; display: none !important; float: none !important;
+}
+/* V50 — rounder, gently asymmetric portrait crop; keep image and outlines intact. */
+.photo-hero .profile-image {
+  aspect-ratio: 1.08 / 1 !important;
+  border-radius: 55% 45% 53% 47% / 49% 53% 47% 51% !important;
+  transform: rotate(-3deg) !important;
+}
+@media (max-width: 640px) {
+  .photo-hero .profile-image { aspect-ratio: 1.08 / 1 !important; }
+}

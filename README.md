@@ -15,3 +15,6 @@ V48: Updated second paragraph in Natürliche Inspiration (German and English). A
 
 
 V49: Stronger curved right edge on Über mich paragraphs on desktop only; all other design and content unchanged.
+
+
+V50: Shortened About text in German and English, restored normal paragraph alignment, and adjusted the portrait crop to a rounder asymmetric oval.
