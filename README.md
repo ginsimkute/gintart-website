@@ -18,3 +18,6 @@ V49: Stronger curved right edge on Über mich paragraphs on desktop only; all ot
 
 
 V50: Shortened About text in German and English, restored normal paragraph alignment, and adjusted the portrait crop to a rounder asymmetric oval.
+
+
+V51: Updated online gallery introduction and vitrine photo caption (DE/EN). Layout unchanged.
