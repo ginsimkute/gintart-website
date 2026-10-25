@@ -8,3 +8,5 @@ V44: Paragraph and supporting text returned to 16px, including gallery intro. Ab
 V45: Updated Über mich and Natürliche Inspiration paragraphs in German and English; all styling unchanged.
 
 V46: About section wording refined in German, second Gint Art emphasis removed in both languages, paragraph spacing tightened. All other styling unchanged.
+
+V47: Über mich – subtle oval-following paragraph edge on wide screens only; no changes to text, imagery, or other sections.
