@@ -1075,3 +1075,10 @@ h2{font-size:clamp(39px,4vw,61px);margin:13px 0 18px}
 }
 /* Vitrine: oval shape and crop retained; photo 5% smaller. */
 .discover-grid .vitrine-wrap .photo-vitrine { width: 73.15% !important; }
+
+/* V46 — slightly tighter spacing between the three About paragraphs. */
+.hero-copy .hero-story p { margin-top: 0 !important; margin-bottom: 13px !important; }
+.hero-copy .hero-story p:last-child { margin-bottom: 0 !important; }
+@media (max-width: 640px) {
+  .hero-copy .hero-story p { margin-bottom: 12px !important; }
+}

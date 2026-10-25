@@ -6,3 +6,5 @@ V43: unified handwritten text sizes (min 20px); paragraph copy 17px; portrait ba
 V44: Paragraph and supporting text returned to 16px, including gallery intro. About beige backdrop reduced 5%; vitrine oval image reduced 5% without changing its shape.
 
 V45: Updated Über mich and Natürliche Inspiration paragraphs in German and English; all styling unchanged.
+
+V46: About section wording refined in German, second Gint Art emphasis removed in both languages, paragraph spacing tightened. All other styling unchanged.
