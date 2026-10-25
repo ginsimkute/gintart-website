@@ -21,3 +21,6 @@ V50: Shortened About text in German and English, restored normal paragraph align
 
 
 V51: Updated online gallery introduction and vitrine photo caption (DE/EN). Layout unchanged.
+
+
+V52: Updated About Me paragraphs, gallery discovery wording, vitrine caption punctuation, and gallery enquiry copy (German and English). Styling unchanged.
